@@ -18,8 +18,8 @@
 
 - name: "Build doc-node"
   shell: "npm run build"
-    args:
-      chdir: "{{ doc_node_location }}"
+  args:
+    chdir: "{{ doc_node_location }}"
 
 - name: "Pull ubuntu docker image"
   shell: "docker pull ubuntu:latest"
