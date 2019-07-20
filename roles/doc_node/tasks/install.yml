@@ -1,0 +1,25 @@
+---
+# These tasks install doc-node
+
+- name: "Clone doc-node repository"
+  git:
+    repo: "https://github.com/ale8193/doc-node.git"
+    dest: "{{ doc_node_location }}"
+
+- name: "Install node_modules"
+  shell: "npm install"
+  args:
+    chdir: "{{ doc_node_location }}"
+
+- name: "Add config.json file"
+  template:
+    src: "config.json.j2"
+    dest: "{{ doc_node_location }}/config.json"
+
+- name: "Build doc-node"
+  shell: "npm run build"
+    args:
+      chdir: "{{ doc_node_location }}"
+
+- name: "Pull ubuntu docker image"
+  shell: "docker pull ubuntu:latest"

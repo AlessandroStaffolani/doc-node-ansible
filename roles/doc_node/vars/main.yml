@@ -1,0 +1,6 @@
+---
+
+doc_node_location: "/opt/doc-node"
+webdav_host: "http://192.168.210.84:8888/webdav"
+webdav_path": "/backup"
+

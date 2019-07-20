@@ -1,0 +1,7 @@
+---
+
+- name: "Install doc-node"
+  hosts: "nodes"
+  roles:
+    # TODO add task for docker installation e node
+    - "doc_node"
