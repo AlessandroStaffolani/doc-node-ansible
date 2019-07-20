@@ -3,5 +3,5 @@
 
 - name: "Start doc-node in background"
   shell: "nohup node build/index.js &"
-    args:
-      chdir: "{{ doc_node_location }}"
+  args:
+    chdir: "{{ doc_node_location }}"
