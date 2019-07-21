@@ -2,6 +2,6 @@
 # These tasks start doc-node on the host
 
 - name: "Start doc-node in background"
-  shell: "nohup node build/index.js &"
+  shell: "screen -dmSL doc-node node build/index.js"
   args:
     chdir: "{{ doc_node_location }}"
