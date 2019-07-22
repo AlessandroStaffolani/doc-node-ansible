@@ -1,0 +1,7 @@
+---
+# These tasks stop doc-node on the host
+
+- name: "Stop doc-node"
+  shell: "screen -X -S doc-node quit"
+  args:
+    chdir: "{{ doc_node_location }}"
